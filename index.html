@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamshikrishna Yedalla - Portfolio</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: bounce 2s ease infinite;
+        }
+
+        .section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: #1a2a6c;
+            border-bottom: 2px solid #fdbb2d;
+            padding-bottom: 10px;
+        }
+
+        #home, #about, #contact {
+            animation: slideInFromLeft 1s ease-out;
+        }
+
+        #portfolio, #knowledge-sharing, #timeline {
+            animation: slideInFromRight 1s ease-out;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 2px solid #1a2a6c;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #fdbb2d;
+            border: 2px solid #1a2a6c;
+            border-radius: 50%;
+            position: absolute;
+            left: -7px;
+            top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            animation: fadeIn 2s ease-out;
+        }
+
+        a {
+            color: #b21f1f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fdbb2d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Vamshikrishna Yedalla</h1>
+            <p>IT Project Manager | Full Stack Developer</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Home</h2>
+            <p>Welcome to my portfolio. I'm an experienced technology leader specializing in full-stack development and project management.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>Experienced technology leader with a demonstrated history in the IT sector. Committed to guiding teams towards achieving target goals through Agile development, cloud computing, and project management.</p>
+        </section>
+
+        <section id="portfolio" class="section">
+            <h2>Portfolio</h2>
+            <div class="timeline-item">
+                <h3>Delta Airlines Inc</h3>
+                <p>Senior Full Stack Java Developer (Nov 2022 - Present)</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Equifax</h3>
+                <p>Senior Full Stack Java Developer (Sep 2021 - Oct 2022)</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Tata Consultancy Services</h3>
+                <p>Senior Full Stack Java Developer (April 2020 – Sept 2021)</p>
+            </div>
+        </section>
+
+        <section id="knowledge-sharing" class="section">
+            <h2>Knowledge Sharing</h2>
+            <div class="timeline-item">
+                <h3>Blog: Effective Agile Practices</h3>
+                <p>Insights on implementing Agile methodologies effectively in various types of projects.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Resource: JavaScript Design Patterns</h3>
+                <p>Comprehensive guide to design patterns in JavaScript.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Workshop: Building Scalable Applications on AWS</h3>
+                <p>Learn to design and build scalable applications using AWS services.</p>
+            </div>
+        </section>
+
+        <section id="timeline" class="section">
+            <h2>Career Timeline</h2>
+            <div class="timeline-item">
+                <p>Nov 2022 - Present: Delta Airlines Inc</p>
+            </div>
+            <div class="timeline-item">
+                <p>Sep 2021 - Oct 2022: Equifax</p>
+            </div>
+            <div class="timeline-item">
+                <p>April 2020 – Sept 2021: Tata Consultancy Services</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:vamshikrishnay09@gmail.com">vamshikrishnay09@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/vamshikrishna-yedalla-9a97871b0/" target="_blank">LinkedIn Profile</a></p>
+            <p>Phone: 660-528-0918</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vamshikrishna Yedalla. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
